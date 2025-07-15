@@ -1,0 +1,109 @@
+.my-orders-order {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  color: #454545;
+  animation: fadeAppear 0.6s;
+  font-size: 14px;
+  /* background-color: rgb(240, 248, 255); */
+  background: rgba(240, 248, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27),
+    inset 0 0 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.notaccepted {
+  /* border: 1.5px solid orangered; */
+  background: linear-gradient(
+    170deg,
+    rgba(255, 85, 23, 0.4),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 85, 23, 0.2);
+
+  border-radius: 6px;
+}
+.processing {
+  background: linear-gradient(
+    170deg,
+    rgba(48, 176, 255, 0.4),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 6px;
+}
+.delivered {
+  background: linear-gradient(
+    170deg,
+    rgba(27, 255, 23, 0.4),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 6px;
+}
+.delivery {
+  background: linear-gradient(
+    170deg,
+    rgba(255, 178, 23, 0.4),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 6px;
+}
+.hide-track {
+  display: none;
+}
+@media (max-width: 900px) {
+  .my-orders-order {
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 5px;
+    font-size: 13px;
+  }
+}
+@keyframes fadeAppear {
+  from {
+    opacity: 0;
+    transform: translateY(600px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.no-order-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+  margin-top: 40px;
+}
+.no-order-container h1 {
+  font-size: 27px;
+  color: #454545;
+  font-weight: 600;
+}
+.no-order-container p {
+  font-size: 16px;
+  color: #454545;
+}
+.dishes {
+  font-size: 19px;
+  font-weight: 500;
+  color: #454545;
+}
+@media (max-width: 600px) {
+  .no-order-container h1 {
+    font-size: 20px;
+  }
+  .no-order-container p {
+    font-size: 14px;
+  }
+  .dishes {
+    font-size: 18px;
+  }
+}

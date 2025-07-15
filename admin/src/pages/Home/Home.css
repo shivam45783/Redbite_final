@@ -1,0 +1,86 @@
+.home {
+  width: 80%;
+  /* height: 100vh; */
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.home-logo img {
+  width: 100px;
+}
+.heading {
+  width: 100%;
+}
+.heading h1 {
+  font: bold 40px "Poppins";
+  font-size: 25px;
+  color: #262626;
+  align-items: flex-start;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin-top: 10px;
+}
+.orders {
+    width: 100%;
+}
+.revenue {
+    width: 100%;
+    margin-top: 30px;
+}
+.stats-card {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(174, 255, 102, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27),
+    inset 0 0 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #262626;
+  font-size: 20px;
+  padding: 10px;
+  /* width: 100%; */
+}
+.stats-card h1 {
+    font-weight: 600;
+    font-size: 25px;
+
+}
+.stats-card p {
+    font-size: 14px;
+}
+
+@media(max-width: 600px) {
+  .logo img {
+    width: 70px;
+  }
+  .heading h1 {
+    font-size: 20px;
+  }
+  .stats-card p{
+    font-size: 12px;
+  }
+  .stats-card h1{
+    font-size: 20px;
+  }
+  .stats {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+}

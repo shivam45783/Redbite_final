@@ -1,0 +1,39 @@
+
+.update-btn {
+  max-width: 120px;
+  border: none;
+  padding: 10px !important;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Tailwind's shadow-2xl */
+  border-radius: 5px;
+}
+.col {
+  gap: 20px;
+}
+.add-img-upload img {
+  width: 120px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.add-heading h1 {
+  font: bold 40px "Poppins";
+  font-size: 25px;
+  color: #262626;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.add-price {
+  position: relative;
+}
+.add-price span {
+  position: absolute;
+  right: 10px;
+  width: 5px;
+  color: #555;
+  
+}
+.add-price input {
+  padding-left: 18px;
+}

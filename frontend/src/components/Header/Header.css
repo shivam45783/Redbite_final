@@ -1,0 +1,52 @@
+.header {
+  background: url("/header_img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-top: 128px;
+}
+.header-contents {
+  animation: fadeIn 2s;
+}
+.header-contents button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+/* .header-contents h2:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+.header-contents p:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+} */
+@media (max-width: 1024px) {
+  .header {
+    height: 38vw;
+    margin-top: 120px;
+  }
+  .header-contents {
+    max-width: 45%;
+  }
+  .header h2 {
+    font-size: 3.5vw;
+  }
+}
+@media (max-width: 768px) {
+  .header-contents {
+    max-width: 65%;
+  }
+  .header-contents h2 {
+    font-size: 4.5vw;
+  }
+  .header-contents p {
+    display: none;
+  }
+  .header-contents button {
+    padding: 2vw 4vw;
+    font-size: 2.3vw;
+    margin-top: 0px;
+    margin-bottom: 1px;
+  }
+}

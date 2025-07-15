@@ -1,0 +1,126 @@
+.add {
+  width: 70%;
+  margin-left: max(25px, 5vw) !important;
+  margin-top: 50px !important;
+  color: #4b5563; /* Tailwind's gray-600 */
+  font-size: 16px;
+  padding: 1.25rem; /* p-5 = 5 * 0.25rem = 1.25rem = 20px */
+  border-radius: 20px;
+}
+
+.add-product-name,
+.add-product-description {
+  width: max(40%, 280px);
+}
+.add-product-name input,
+.add-product-description textarea {
+  padding: 10px;
+}
+.add-category-price select,
+.add-category-price input {
+  max-width: 120px;
+  padding: 10px;
+}
+.add-category-price select {
+  background-color: #fff;
+  border: 1.4px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-category-price {
+  display: flex;
+  gap: 28px;
+}
+.add input,
+.add textarea {
+  border: 1.4px solid #000000;
+  border-radius: 4px;
+  background-color: rgb(250, 250, 250);
+}
+.add input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 1.4px orangered;
+  transition: box-shadow 0.4s ease;
+  border: none;
+}
+.add-btn {
+  max-width: 120px;
+  border: none;
+  padding: 10px !important;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+  transition: all 0.15s ease-in-out;
+  background-color: orangered;
+}
+@keyframes fadeAppear1 {
+  from {
+    opacity: 0;
+    transform: translateY(600px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.add-img-upload {
+  animation: fadeAppearBounce 0.5s;
+}
+.add-product-name {
+  animation: fadeAppearBounce 0.7s;
+}
+.add-product-description {
+  animation: fadeAppearBounce 0.9s;
+}
+.add-category-price {
+  animation: fadeAppearBounce 1.1s;
+}
+.add-category-price {
+  animation: fadeAppearBounce 1.3s;
+}
+.add-btn {
+  animation: fadeAppearBounce 1.5s;
+}
+
+.add-heading h1 {
+  font: bold 40px "Poppins";
+  font-size: 25px;
+  color: #262626;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.add-price {
+  position: relative;
+}
+.add-price span {
+  position: absolute;
+  left: 6px;
+  transform: translateY(50%);
+  font-size: 15px;
+  color: #555;
+}
+@media (max-width: 600px) {
+  .add p {
+    font-size: 13px;
+  }
+  .add-product-description textarea,
+  .add-product-name input {
+    width: 60vw;
+  }
+  .add-category-price {
+    gap: 10px;
+  }
+}

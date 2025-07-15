@@ -1,0 +1,203 @@
+.header img {
+    width: 100px;
+}
+.header h1 {
+    font-size: 25px;
+}
+  .admin-login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 60vw;
+
+  }
+  .admin-login-container {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.47),
+      inset 0 0 1px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+  }
+  .info {
+    width: 50%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .login {
+    width: 50%;
+    background-color:#fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .login h1 {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+  .login input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    padding-left: 10px;
+    padding: 9px;
+  }
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px orangered;
+    transition: box-shadow 0.2s ease;
+  }
+  .input-wrapper {
+    position: relative;
+  }
+  .input-wrapper img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 15px;
+    cursor: pointer;
+  }
+  .login-info {
+    display: none;
+    position: absolute;
+    /* bottom: -3.5rem; */
+    top: -90px;
+    left: 0;
+    background-color: #fffeba;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    font-size: 12px;
+    z-index: 10;
+    animation: fadeAppearRight 0.8s ease-in-out;
+  }
+  
+  /* Show login-info on hover or focus within the input-wrapper */
+  .input-wrapper:hover .login-info,
+  .input-wrapper:hover .login-info {
+    display: block;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  .content h1 {
+    margin-top: 8px;
+  }
+  .header {
+    /* margin-bottom: 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .login-button-admin {
+    background-color: orangered;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .login-button-admin:hover {
+    background-color: #000000;
+    transition: all 0.3s ease-in-out;
+  }
+  @keyframes fadeAppearRight {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+      /* scale: 0; */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      /* scale: 1; */
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateZ(400px);
+      transform: translateY(400px);
+    }
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 750px) {
+    .admin-login-container {
+      flex-direction: column;
+      /* width: 100%; */
+      height: 90%;
+    }
+    .login {
+      width: 100%;
+      height: 60%;
+    }
+    .info {
+      width: 100%;
+      height: 40%;
+    }
+    .info p {
+      font-size: 15px;
+    }
+    .info img {
+      width: 90px;
+    }
+    .login-info {
+      right: -140px;
+      top: 10px;
+      left: auto;
+      font-size: 10px;
+      width: 130px;
+      animation: fadeAppearRight 0.8s ease-in-out;
+    }
+    .header {
+      margin-bottom: 0px;
+      margin-top: 10px;
+    }
+    .content {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+  

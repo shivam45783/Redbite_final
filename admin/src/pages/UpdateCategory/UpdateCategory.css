@@ -1,0 +1,60 @@
+.add-category-btn:hover {
+  transform: scale(1.05);
+  transition: all 0.15s ease-in-out;
+  background-color: orangered;
+}
+.add-category-name input {
+  padding: 10px;
+  max-width: 160px;
+  border: 1.4px solid #000000;
+  border-radius: 4px;
+  background-color: rgb(250, 250, 250);
+}
+.add-category-name input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1.4px orangered;
+  transition: box-shadow 0.3s ease;
+  border: none;
+}
+.add-category-img-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.category-heading {
+  font: bold 40px "Poppins";
+  font-size: 25px;
+  color: #262626;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.add-category-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+}
+.add-category-btn {
+  max-width: 120px;
+  border: none;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.category-heading {
+  animation: fadeAppearBounce 0.5s ease-in-out;
+}
+.add-category-img-upload img {
+  animation: fadeAppearBounce 0.7s ease-in-out;
+}
+.add-category-name {
+  animation: fadeAppearBounce 0.9s ease-in-out;
+}
+.add-category-btn {
+  animation: fadeAppearBounce 1.1s ease-in-out;
+}

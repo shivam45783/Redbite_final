@@ -1,0 +1,8 @@
+.download-btn {
+    width: 160px;
+}
+.download-btn:hover {
+    transform: scale(1.01);
+  transition: all 0.15s ease-in-out;
+  background-color: rgb(43, 43, 43)
+}

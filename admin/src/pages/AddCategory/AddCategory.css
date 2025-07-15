@@ -1,0 +1,102 @@
+.category-container {
+  width: 70%;
+  margin-left: max(25px, 5vw);
+  margin-top: 50px;
+  color: #4b5563;              
+  font-size: 16px;
+  padding: 1.25rem;           
+}
+.upload-area {
+  width: 120px;
+  cursor: pointer;
+}
+.category-name {
+  margin: 12px 0px 12px 0px;
+}
+.category-name p {
+  margin-bottom: 4px;
+}
+.category-add-btn {
+  max-width: 120px;
+  border: none;
+  padding-top: 10px ;
+  padding-bottom: 10px ;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); 
+  border-radius: 5px;
+}
+.category-add-btn:hover {
+  transform: scale(1.05);
+  transition: all 0.15s ease-in-out;
+  background-color: orangered;
+  
+}
+
+.category-container input {
+  border: 1.4px solid #000000;
+  border-radius: 4px;
+  background-color: rgb(250, 250, 250);
+  max-width: 220px;
+  padding: 10px;
+  outline: none;
+}
+.add-category-heading {
+  font: bold 40px "Poppins";
+  font-size: 25px;
+  color: #262626;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px orangered;
+  transition: box-shadow 0.4s ease;
+  border: none;
+}
+.add-category-heading {
+  animation: fadeAppearBounce 0.4s;
+}
+.add-category-upload p {
+  animation: fadeAppearBounce 0.5s;
+}
+
+.add-category-upload img {
+  animation: fadeAppearBounce 0.6s;
+}
+
+.category-name p {
+  animation: fadeAppearBounce 0.7s;
+}
+
+.category-name input {
+  animation: fadeAppearBounce 1s;
+}
+
+.category-add-btn {
+  animation: fadeAppearBounce 1.1s;
+}
+
+@keyframes fadeAppearBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(600px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .category-container p {
+    font-size: 13px;
+  }
+}

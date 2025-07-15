@@ -1,0 +1,99 @@
+.detail-container .name-box,
+.detail-container .email-box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  gap: 8px;
+}
+.detail-container {
+  margin-top: 30px;
+}
+.detail-container input {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  /* box-shadow: 0 0 0 2px orangered; */
+  transition: box-shadow 0.2s ease;
+  background-color: #ccc;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.detail-container input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px orangered;
+  transition: box-shadow 0.2s ease;
+}
+.input-hide {
+  display: none;
+}
+.detail-container h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.detail-container h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.detail-container p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.detail-container button {
+  background-color: green;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.detail-container button:hover {
+  background-color: #000000;
+  
+}
+.detail-container .password-box p {
+  background-color: #ff4500;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.detail-container .password-box p:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateZ(400px);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+    transform: translateY(0);
+  }
+}
+.glass-mirror {
+    background: rgba(255, 255, 255, 0.1); /* subtle white for glass look */
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    color: black;
+    position: relative;
+  }
+  

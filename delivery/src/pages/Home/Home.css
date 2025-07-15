@@ -1,0 +1,79 @@
+.delivery_home {
+  width: 100%;
+  /* margin-left: 20px; */
+}
+.header_del {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header_del h1 {
+    font: bold 40px "Poppins";
+    font-size: 30px;
+    color: #262626;
+    width: 100%;
+    
+}
+.quote {
+    /* width: 100%; */
+    margin-top: 30px;
+    padding: 5px;
+    align-self: flex-start;
+    justify-self: flex-end;
+}
+.quote p {
+    font-style: italic;
+    font-size: 14px;
+    color: #262626;
+}
+.orders_home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 80%;
+}
+.orders_home h1 {
+  font: bold 40px "Poppins";
+  font-size: 25px;
+  color: #262626;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  /* margin-left: 30px; */
+}
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  /* row-gap: 50px; */
+  width: 100%;
+  margin-top: 10px;
+  /* margin: 0px 30px 0px 30px; */
+}
+.order-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(174, 255, 102, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27),
+    inset 0 0 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #262626;
+  font-size: 20px;
+  padding: 10px;
+}
+.order-card p {
+    align-self: flex-start;
+    font-size: 15px;
+}
+.order-card h2 {
+    font-size: 30px;
+    font-weight: bold;
+    
+}
