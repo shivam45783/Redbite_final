@@ -22,7 +22,7 @@ const generateNewRider = async (req, res) => {
 
   try {
     const password = generateRandomId();
-    const id = generateRandomId();
+    const riderId = generateRandomId();
     const existingRider = await riderModel.findOne({ email });
     if (existingRider) {
       return res.json({ success: false, message: "Rider already exists" });
@@ -34,7 +34,7 @@ const generateNewRider = async (req, res) => {
       email,
       password: hashedPassword,
       phone,
-      id,
+      riderId,
     });
     console.log(rider);
     let data = rider;
@@ -42,9 +42,9 @@ const generateNewRider = async (req, res) => {
 
     res.json({ success: true, message: "Rider created successfully", data });
   } catch (error) {
-    if (error.code === 11000) {
-      return res.json({ success: false, message: "Rider with same phone number already exists" });
-    }
+    // if (error.code === 11000) {
+    //   return res.json({ success: false, message: "Rider with same phone number already exists" });
+    // }
     res.json({ success: false, message: "Error in creating rider", error });
     console.log(error);
   }
@@ -53,7 +53,7 @@ const generateNewRider = async (req, res) => {
 const login = async (req, res) => {
   const { id, password } = req.body;
   try {
-    const rider = await riderModel.findOne({ id });
+    const rider = await riderModel.findOne({ riderId: id });
     if (!rider) {
       return res.json({ success: false, message: "Rider not found" });
     }
@@ -85,7 +85,7 @@ const changeCredentials = async (req, res) => {
     const rider = await riderModel.findById(_id);
     const hashedPassword = await bycrypt.hash(password, 10);
     rider.password = hashedPassword;
-    rider.id = id;
+    rider.userId = id;
     rider.authorized = true;
     await rider.save();
     res.json({ success: true, message: "Credentials changed successfully" });
@@ -107,27 +107,26 @@ const getRider = async (req, res) => {
     const rider = await riderModel.findById(id);
     res.json({ success: true, message: "Rider fetched successfully", rider });
   } catch (error) {
-    if (error.name = "TokenExpiredError") {
-      return res
-        .status(401)
-        .json({ success: false, message: "Session expired. Please log in again." });
+    if ((error.name = "TokenExpiredError")) {
+      return res.status(401).json({
+        success: false,
+        message: "Session expired. Please log in again.",
+      });
     }
     res.json({ success: false, message: "Error in fetching rider", error });
   }
 };
 const setRider = async (req, res) => {
   const { riderId, orderId } = req.body;
-  
+
   try {
     const order = await orderModel.findById(orderId);
     order.deliveryRider = riderId;
     await order.save();
     res.json({ success: true, message: "Rider assigned successfully" });
-    
   } catch (error) {
     res.json({ success: false, message: "Error in assigning rider", error });
     console.log(error);
-
   }
 };
 export { generateNewRider, login, changeCredentials, getRider, setRider };

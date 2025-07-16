@@ -16,7 +16,7 @@ const Rider = ({ url }) => {
     navigator.clipboard.writeText(text);
     toast.success("Copied!");
   };
-  
+
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     if (data.name === "") {
@@ -42,7 +42,6 @@ const Rider = ({ url }) => {
     } else {
       toast.error(response.data.message);
       // console.log(response.data);
-      
     }
   };
 
@@ -106,11 +105,11 @@ const Rider = ({ url }) => {
           </div>
           <div className="riderId">
             <p>Id</p>
-            <input type="text" value={rider?.id} readOnly />
+            <input type="text" value={rider?.riderId} readOnly />
             <img
               src={assets.copy}
               alt=""
-              onClick={() => copyToClipboard(rider?.id)}
+              onClick={() => copyToClipboard(rider?.riderId)}
             />
           </div>
           <div className="riderPass">

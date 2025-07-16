@@ -21,6 +21,12 @@
   background-color: rgb(250, 250, 250);
   padding: 7px;
 }
+.riderId input, .riderPass input {
+  border: 1.4px solid #000000;
+  border-radius: 4px;
+  background-color: rgb(250, 250, 250);
+  padding: 7px;
+}
 input:focus {
   outline: none;
   box-shadow: 0 0 0 2px orangered;
