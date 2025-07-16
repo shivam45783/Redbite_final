@@ -7,11 +7,11 @@ import { BrowserRouter } from "react-router-dom";
 import StoreContextProvider, { StoreContext } from "./context/StoreContext.jsx";
 import CartPop from "./components/CartPop/CartPop.jsx";
 import { PrimeReactProvider } from "primereact/api";
-import ChatContextProvider from "./context/ChatContext.jsx";
+
 import ScrollNotify from "./components/ScrollNotify/ScrollNotify.jsx";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <ChatContextProvider>
+
       <StoreContextProvider>
         <PrimeReactProvider>
           <CartPop />
@@ -19,6 +19,6 @@ createRoot(document.getElementById("root")).render(
           <App />
         </PrimeReactProvider>
       </StoreContextProvider>
-    </ChatContextProvider>
+
   </BrowserRouter>
 );

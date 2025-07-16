@@ -19,7 +19,7 @@ import CartPop from "./components/CartPop/CartPop";
 import ForgotPass from "./pages/ForgotPass/ForgotPass";
 import Loading from "./components/Loading/Loading";
 import { StoreContext } from "./context/StoreContext";
-// import ChatHome from "./pages/ChatHome/ChatHome";
+
 const BodyClassController = () => {
   const location = useLocation();
 
@@ -49,9 +49,6 @@ const BodyClassController = () => {
     if (location.pathname.startsWith("/forgotpassword/")) {
       document.body.classList.add("changepass-page");
     }
-    if (location.pathname.startsWith("/chat/")) {
-      document.getElementsByClassName("app")[0].classList.remove("widthInApp");
-    }
   }, [location]);
 
   return null;
@@ -64,8 +61,8 @@ const App = () => {
     location.pathname === "/" ||
     location.pathname.startsWith("/otp/") ||
     location.pathname === "/authemail" ||
-    location.pathname.startsWith("/forgotpassword") ||
-    location.pathname.startsWith("/chat/");
+    location.pathname.startsWith("/forgotpassword");
+
   return (
     <>
       <BodyClassController />
@@ -84,10 +81,9 @@ const App = () => {
           <Route path="/myorders" element={<MyOrders />} />
           <Route path="/authemail" element={<AuthEmail />} />
           <Route path="/forgotpassword/:email" element={<ForgotPass />} />
-          {/* <Route path="/chat/:id" element={<ChatHome />} /> */}
         </Routes>
       </div>
-      
+
       {!hideLayout && <Footer />}
     </>
   );
