@@ -39,7 +39,7 @@ const addCategory = async (req, res) => {
     let image_filename = `${req.file.filename}`;
     const foodLocalPath = `./uploads/${image_filename}`;
     const result = await uploadOnCloudinary(image_filename, foodLocalPath);
-    const url = result.url;
+    const url = result.secure_url;
     const category = await categoryModel.create({ name, url });
     res
       .status(200)
@@ -75,7 +75,7 @@ const updateCategory = async (req, res) => {
     let image_filename = `${req.file.filename}`;
     const foodLocalPath = `./uploads/${image_filename}`;
     const result = await uploadOnCloudinary(image_filename, foodLocalPath);
-    const url = result.url;
+    const url = result.secure_url;
     const categoryOld = await categoryModel.findById(id);
     const oldName = categoryOld.name;
     const changeFood = await foodModel.updateMany({ category: oldName }, { category: name });

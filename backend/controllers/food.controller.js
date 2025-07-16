@@ -14,7 +14,7 @@ const addFood = async (req, res, next) => {
     price: req.body.price,
     image: image_filename,
     category: req.body.category,
-    url: result.url,
+    url: result.secure_url,
     publicId: result.public_id,
   });
   try {
@@ -116,7 +116,7 @@ const updateFood = async (req, res, next) => {
           price: req.body.price,
           image: image_filename,
           category: req.body.category,
-          url: result.url,
+          url: result.secure_url,
           publicId: result.public_id,
         },
       }
