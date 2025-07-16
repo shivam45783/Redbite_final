@@ -185,9 +185,7 @@ const Update = ({ url }) => {
           </div>
           <div className="add-price">
             <p>Product price</p>
-            <span className="">
-              ₹
-            </span>
+            <span className="">₹</span>
             <input
               type="number"
               name="price"
