@@ -23,7 +23,7 @@ html {
   margin: auto;
 }
 .login-page {
-    background: url("./delivery_home.jpg");
+    background: url("../public/delivery_home.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
