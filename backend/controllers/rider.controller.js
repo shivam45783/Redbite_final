@@ -42,9 +42,9 @@ const generateNewRider = async (req, res) => {
 
     res.json({ success: true, message: "Rider created successfully", data });
   } catch (error) {
-    // if (error.code === 11000) {
-    //   return res.json({ success: false, message: "Rider with same phone number already exists" });
-    // }
+    if (error.code === 11000) {
+      return res.json({ success: false, message: "Rider with same phone number already exists" });
+    }
     res.json({ success: false, message: "Error in creating rider", error });
     console.log(error);
   }
