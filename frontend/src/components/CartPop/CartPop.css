@@ -2,6 +2,13 @@
 
 /* transform: translate(-50%, -50%); */
 /* } */
+.cart-popup-items {
+  scrollbar-width: none;     
+  -ms-overflow-style: none;
+}
+.cart-items-popup::-webkit-scrollbar {
+  display: none;
+}
 .cart-popup-container .hide {
   display: none !important;
 }
