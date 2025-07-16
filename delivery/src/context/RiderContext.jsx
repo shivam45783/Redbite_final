@@ -5,7 +5,7 @@ import axios from "axios";
 export const RiderContext = React.createContext(null);
 
 const RiderContextProvider = ({ children }) => {
-  const url = "http://localhost:4000";
+  const url = "https://redbite-final-backend.onrender.com";
   const [riderDetails, setRiderDetails] = useState({});
   const navigate = useNavigate();
   const [token, setToken] = useState("");

@@ -4,7 +4,7 @@ import axios from "axios";
 export const AdminContext = React.createContext(null);
 
 const AdminContextProvider = (props) => {
-  const url = "http://localhost:4000";
+  const url = "https://redbite-final-backend.onrender.com";
   const [token, setToken] = useState(null);
   const navigate = useNavigate();
   const [cartItems, setCartItems] = useState({});

@@ -12,7 +12,7 @@ import { useEffect } from "react";
 
 const App = () => {
   const location = useLocation();
-  const url = "http://localhost:4000";
+  const url = "https://redbite-final-backend.onrender.com";
   const hideLocation =
     location.pathname === "/" || location.pathname.startsWith("/auth");
   const BodyClassController = () => {

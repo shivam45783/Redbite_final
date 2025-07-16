@@ -15,7 +15,7 @@ import Rider from "./pages/Rider/Rider";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 const App = () => {
-  const url = "http://localhost:4000";
+  const url = "https://redbite-final-backend.onrender.com";
   const location = useLocation();
   const hideLocation = 
     location.pathname = "/"
