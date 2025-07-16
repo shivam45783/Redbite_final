@@ -217,19 +217,14 @@ const StoreContextProvider = (props) => {
 
   useEffect(() => {
     async function loadData() {
+      getCategory();
       const storedToken = localStorage.getItem("token");
       if (storedToken) {
         setToken(storedToken);
         await getUserDetails(storedToken);
         await loadCartData(storedToken);
-        getCategory();
+        
       }
-      // else {
-      //   if (location.pathname !== "/") {
-      //     navigate("/");
-      //     toast.error("Log In to continue");
-      //   }
-      // }
       await fetchFoodList();
     }
 
