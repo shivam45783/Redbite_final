@@ -13,6 +13,7 @@
 .listcategory-total  {
     margin: 5px;
 }
+
 .category-table-format {
   display: grid;
   grid-template-columns: 1fr 0.5fr 4fr 0.5fr 0.5fr;
