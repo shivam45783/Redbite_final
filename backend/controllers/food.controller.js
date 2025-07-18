@@ -55,7 +55,6 @@ const removeFood = async (req, res, next) => {
     }
     console.log(food);
     await deleteFromCloudinary(food.publicId);
-    // fs.unlinkSync(`./uploads/${food.image}`);
     await foodModel.deleteOne({ _id: req.body.id });
     res.json({ success: true, message: "Food item removed successfully" });
   } catch (error) {

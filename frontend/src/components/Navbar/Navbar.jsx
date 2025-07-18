@@ -42,10 +42,7 @@ const Navbar = () => {
     setToken("");
     navigate("/");
   };
-  // useEffect(()=>{
-  //   console.log(showDrop);
-
-  // },[showDrop])
+  
   useEffect(() => {
     const handleClickOutside = (e) => {
       const profile = document.querySelector(".navbar-profile");
@@ -100,34 +97,10 @@ const Navbar = () => {
           </a>
         </ul>
         <div className="navbar-right flex items-center gap-[40px]  ">
-          {/* <img
-            src={assets.search_icon}
-            alt=""
-            className="w-[18px] cursor-pointer"
-          /> */}
-          {/* <div className="relative navbar-search-icon ">
-            <img
-              src={assets.basket_icon}
-              alt=""
-              className="min-w-[18px] max-w-[18px] cursor-pointer"
-              onClick={() => {
-                if (checkEmptyCart()) {
-                  emptyCartNotify();
-                  return;
-                }
-                navigate("/cart");
-              }}
-            />
-
-            <div
-              className={`dot absolute min-w-[10px] min-h-[10px] bg-red-500 rounded-[5px] top-[-8px] right-[-8px] ${
-                Object.keys(cartItems).length === 0 ? "hidden" : ""
-              }`}
-            ></div>
-          </div> */}
+          
           {!token ? (
             <button
-              className="bg-transparent text-[14px] text-gray-500 border-[1px] border-red-500 rounded-2xl cursor-pointer !px-8 !py-2 transition ease-in-out delay-10 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-amber-50"
+              className=""
               onClick={() => {
                 window.location.href = "/";
               }}

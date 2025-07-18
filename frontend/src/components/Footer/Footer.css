@@ -1,8 +1,22 @@
+.footer {
+  color: #d9d9d9;
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem; 
+  padding-top: 80px;
+  padding-left: 8vw ;
+  padding-right: 8vw ;
+  padding-bottom: 20px ;
+  margin-top: 10px ;
+}
 
 .footer-content {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 80px;
+  width: 100%;
 }
 .footer-content-left,
 .footer-content-right,
@@ -36,6 +50,32 @@ hr {
   border: none;
   margin: 20px 0;
 }
+.linkedin {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.linkedin:hover {
+  transform: scale(1.05);
+}
+.github {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.github:hover {
+  transform: scale(1.05);
+}
+.footer-social-icons #linkedin {
+  margin: 0.5rem;
+  cursor: pointer;
+}
 .github:hover label,
 .linkedin:hover label {
   translate: 0 -5px;
@@ -57,6 +97,11 @@ hr {
   color: white;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.2),
     0 0 12px rgba(255, 255, 255, 0.2);
+}
+.logo_footer-content-left {
+   width: max(8vw, 70px);
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 .logo_footer-content-left:hover {
     translate: 0 -5px;

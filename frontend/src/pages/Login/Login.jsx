@@ -35,17 +35,6 @@ const Login = () => {
     setData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // useEffect(() => {
-  //   console.log(activeMobileContainer);
-  // }, [activeMobileContainer]);
-  // useEffect(() => {
-  //   console.log(activeWebContainer);
-  // }, [activeWebContainer]);
-  // useEffect(() => {
-  //   console.log(data);
-
-  // },[data])
-
   const onLogin_web = async (e) => {
     e.preventDefault();
     let newUrl = url;
@@ -61,7 +50,7 @@ const Login = () => {
       if (newUrl == url + "/api/user/login") {
         localStorage.setItem("token", response.data.token);
       }
-      
+
       setDataFetching(true);
       getUserDetails(response.data.token);
       if (newUrl === url + "/api/user/register") {
@@ -98,44 +87,6 @@ const Login = () => {
     }
   };
   const onLogin_mobile = async (e) => {
-    // e.preventDefault();
-    // let newUrl = url;
-    // if (activeMobileContainer) {
-    //   newUrl = newUrl += "/api/user/register";
-    // } else {
-    //   newUrl = newUrl += "/api/user/login";
-    // }
-
-    // const response = await axios.post(newUrl, data);
-    // if (response.data.success) {
-    //   setToken(response.data.token);
-    //   localStorage.setItem("token", response.data.token);
-    //   setDataFetching(true);
-    //   getUserDetails(response.data.token);
-    //   if (newUrl === url + "/api/user/register") {
-    //     setLoading(true);
-    //     const mailResponse = await axios.post(`${url}/api/mail/send`, {
-    //       token: response.data.token,
-    //       subject: "Account Verification",
-    //     });
-    //     if (!mailResponse.data.success) {
-    //       toast.error(mailResponse.data.message);
-    //       setLoading(false);
-    //     } else {
-    //       toast.success(mailResponse.data.message);
-    //       navigate("/otp/" + response.data.token);
-    //       setLoading(false);
-    //       return;
-    //     }
-    //   }
-    //   navigate("/home");
-    //   setLoading(false);
-    //   toast.success(response.data.message);
-    // } else if (response.data.status === 400) {
-    //   toast.error(response.data.message);
-    // } else {
-    //   toast.error(response.data.message);
-    // }
     e.preventDefault();
     let newUrl = url;
     if (activeMobileContainer) {

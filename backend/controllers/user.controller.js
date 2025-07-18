@@ -7,7 +7,7 @@ import validator from "validator";
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
   try {
-    const user = await userModel.findOne({ email, role: "user" });
+    const user = await userModel.findOne({ email });
     if (!user) {
       return res.json({ success: false, message: "User not found" });
     }
@@ -42,7 +42,7 @@ const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
-    const existingUser = await userModel.findOne({ email, role: "user" });
+    const existingUser = await userModel.findOne({ email });
     if (existingUser && existingUser.otp == null) {
       return res.json({ success: false, message: "User already exists" });
     } else if (existingUser && existingUser.otp != null) {

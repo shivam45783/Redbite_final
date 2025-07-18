@@ -17,7 +17,6 @@ A complete food ordering web application built with MERN stack(MongoDB, Express.
 ##### Frontend:
 
 - ⚛️ React + Vite: Frontend library
-- 💨 Tailwind CSS: CSS framework
 - 📦 Axios: HTTP client for API calls
 - 📡 React Router: Routing in application
 - 🔥 react-hot-toast: Toast notifications

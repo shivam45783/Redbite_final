@@ -83,22 +83,13 @@ const PlaceOrder = () => {
       console.log(error);
     }
   };
-  // useEffect(() => {
-  //   console.log(data);
-  // }, [data]);
-  // useEffect(() => {
-  //   console.log(amountDetails);
 
-  // }, [amountDetails]);
   useEffect(()=>{
     if(!token){
       navigate("/");
       toast.error("Please login to place order");
     } 
-    // else if (getTotalCartAmount() === 0) {
-    //   navigate("/cart");
-    //   toast.error("Cart is empty");
-    // }
+  
   },[token])
   return (
     <form

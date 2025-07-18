@@ -35,11 +35,9 @@ const MyOrders = () => {
   return (
     <>
       {data.length && (
-        <div className="my-orders !mt-[130px] !mx-0">
-          <h1 className="font-[600] text-[#262626] !mt-6 text-2xl">
-            My Orders
-          </h1>
-          <div className="myorder-container flex flex-col gap-[20px] !mt-[30px] ">
+        <div className="my-orders">
+          <h1 className="order-heading">My Orders</h1>
+          <div className="myorder-container">
             {data.map((order, index) => {
               return (
                 <div
@@ -80,7 +78,13 @@ const MyOrders = () => {
                       ""
                     )}
                   </p>
-                  
+                  {order.deliveryRider && (
+                    <button
+                      onClick={() => navigate(`/chat/${order.deliveryRider}`)}
+                    >
+                      Chat
+                    </button>
+                  )}
                 </div>
               );
             })}
@@ -88,10 +92,7 @@ const MyOrders = () => {
         </div>
       )}
       {data.length == 0 && (
-        <div
-          className="no-order-container !mt-[200px] !mb-[200px]"
-          id="no-order-container"
-        >
+        <div className="no-order-container" id="no-order-container">
           <h1>No Orders Found🛒</h1>
           <p>You have not placed any orders</p>
           <p className="dishes">

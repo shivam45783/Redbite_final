@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { createContext, useState } from "react";
-// import { food_list } from "../assets/assets";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -124,7 +123,6 @@ const StoreContextProvider = (props) => {
   const fetchFoodList = async () => {
     try {
       const response = await axios.get(`${url}/api/food/list`);
-      // console.log(response.data);
 
       if (response.data.success) {
         setFoodlist(response.data.data);
@@ -132,19 +130,6 @@ const StoreContextProvider = (props) => {
         toast.error(response.data.message);
       }
     } catch (error) {
-      // if (error.response?.status === 401) {
-      //   localStorage.removeItem("token");
-      //   setToken("");
-      //   navigate("/");
-      //   toast.error("Token expired, please login again");
-      // } else if (error.response?.status === 500) {
-      //   localStorage.removeItem("token");
-      //   setToken("");
-      //   navigate("/");
-      //   toast.error("Token not found, please login again");
-      // } else {
-      //   console.log(error);
-      // }
       console.log(error);
     }
   };
@@ -223,7 +208,6 @@ const StoreContextProvider = (props) => {
         setToken(storedToken);
         await getUserDetails(storedToken);
         await loadCartData(storedToken);
-        
       }
       await fetchFoodList();
     }

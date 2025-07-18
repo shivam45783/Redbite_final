@@ -7,10 +7,6 @@ import { StoreContext } from "../../context/StoreContext";
 const ExploreMenu = ({ category, setCategory }) => {
   const { url, menu, menuRef, scrollAnchorRef } = useContext(StoreContext);
 
-  // useEffect(() => {
-  //   getCategory();
-  //   // console.log(menu);
-  // }, []);
   return (
     <div className="explore-menu" id="explore-menu">
       <h1 className="">Explore Menu</h1>
