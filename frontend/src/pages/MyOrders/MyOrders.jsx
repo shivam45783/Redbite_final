@@ -78,13 +78,7 @@ const MyOrders = () => {
                       ""
                     )}
                   </p>
-                  {order.deliveryRider && (
-                    <button
-                      onClick={() => navigate(`/chat/${order.deliveryRider}`)}
-                    >
-                      Chat
-                    </button>
-                  )}
+                  
                 </div>
               );
             })}
