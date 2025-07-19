@@ -230,7 +230,7 @@ const verifyMail = async (req, res) => {
                 <h2 class="title" style="font-size: 24px; font-weight: 700; color: #333; margin: 0 0 15px;">Email Verification</h2>
                 <p class="message" style="font-size: 16px; color: #333; margin: 0 0 25px;">
                   Hello👋,<br />
-                  Use the OTP below to verify your email address. It is valid for the next 10 minutes.
+                  Use the OTP below to verify your email address.
                 </p>
                 <div class="otp" style="display: inline-block; padding: 15px 30px; font-size: 22px; font-weight: bold; color: #fff; background: linear-gradient(to right, #ffb630, #ff5517); border-radius: 8px; letter-spacing: 4px; margin-bottom: 25px;">
                   ${otp}
